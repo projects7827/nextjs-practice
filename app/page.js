@@ -24,7 +24,7 @@ export default function SearchBar() {
     get_data();
   }, []) // eslint-disable-next-line react-hooks/exhaustive-deps
 
-  async function get_data() {// geting data from fetch api and adding the logic if query parameter value is not present in database then show not foundnpage else show the data
+  async function get_data() {// geting data from fetch api and adding the logic if query parameter value is not present in database then show not found page else show the data
     let response = await fetch('https://jsonplaceholder.typicode.com/todos/' + search)
     if (response.status === 404) {
       router.push("/not-found")
